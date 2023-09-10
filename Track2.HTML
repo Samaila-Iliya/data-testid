@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Data Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 data-testid="slackUserName">Samaila Iliya Damwalm</h1>
+  <img src="https://ca.slack-edge.com/T05FFAA91JP-U05S6D7EX96-db792f6cea45-512" alt="Samaila Iliya Damwalm" data-testid="slackDisplayImage">
+  <p data-testid="currentDayOfTheWeek"></p>
+  <p data-testid="currentUTCTime"></p>
+  <p data-testid="myTrack">Track 2</p>
+  <p data-testid="https://github.com/Samaila-Iliya">
+    <a href="https://github.com/Samaila-Iliya">GitHub Repository</a>
+  </p>
+
+  <script>
+    // Get the current day of the week
+    var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var currentDay = new Date().getDay();
+    var dayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    dayElement.textContent = 'Current Day of the Week: ' + daysOfWeek[currentDay];
+
+    var currentTime = Date.now();
+    var timeElement = document.querySelector('[data-testid="currentUTCTime"]');
+    timeElement.textContent = 'Current UTC Time: ' + currentTime;
+
+    var trackElement = document.querySelector('[data-testid="Track2"]');
+    trackElement.textContent = 'Track2: Frontend';
+  </script>
+</body>
+</html>
